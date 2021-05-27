@@ -290,7 +290,7 @@ static void on_call_state(pjsua_call_id call_id, pjsip_event *e)
 	 *
 	 *  See: https://en.wikipedia.org/wiki/List_of_SIP_response_codes
 	 */
-	if (call_info.last_status == 200) {
+	if (call_info.last_status == 200 || call_info.last_status == 102) {
 	    exit(0);
 	} else if (call_info.last_status == 486 ||
 	           call_info.last_status == 600 ||
